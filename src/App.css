@@ -1,38 +1,118 @@
 .App {
+  font-family: Arial, sans-serif;
+}
+
+.background-image {
+  width: 100vw;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.header-content button {
+  margin: 3px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(53, 52, 52, 0.508);
+  opacity: 0.8;
+}
+
+.header-svg {
+  height: 22px !important;
+  width: 22px !important;
+}
+
+.month-year {
+  font-size: 30px;
+  color: #655d5d;
+  opacity: 0.8;
+}
+
+.day-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.day-tile {
+  border: none;
+  padding: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.tile-header {
+  margin-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tile-header .p1 {
+  font-weight: bold;
+  justify-content: left;
+  display: flex;
+  text-transform: uppercase;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tile-header .p2 {
+  font-weight: 700;
+  font-size: 50px;
+  justify-content: left;
+  display: flex;
+  margin: 0;
+}
+
+.tile-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-radius: 4px;
+  align-items: flex-start;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* Center items horizontally */
 }
 
-.App-link {
-  color: #61dafb;
+.tile-body p {
+  font-size: 14px;
+  margin-left: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tile-body h3 {
+  margin-left: 14px;
+}
+
+.tile-body button {
+  width: 120px;
+  height: 30px;
+  border-width: 2px;
+  border-color: aliceblue;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  /* Center the button horizontally */
+}
+
+.day-tile img {
+  border-radius: 5px;
+  width: 150px;
+  max-height: 120px;
+  margin-bottom: -40px !important;
+  justify-content: center;
+  display: block;
+  margin: 0 auto;
 }
